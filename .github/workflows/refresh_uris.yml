@@ -78,7 +78,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase
           git add file_uris.json
           git diff --staged --quiet || git commit -m "chore: refresh Gemini file URIs [skip ci]"
-          git push
+          git push --force
